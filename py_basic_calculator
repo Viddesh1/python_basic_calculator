@@ -1,0 +1,51 @@
+def my_calculator():
+    command = input("Type start to start the calculator program: ")
+    if command == "start":
+        while True:
+            print("""********************************************************************
+            Hello, welcome to the basic calculator
+            
+            1) Enter Stop to exit the program
+            2) Enter any number in first
+            3) Enter an operator from +, -, *, /, //, %
+            4) Enter any number in second""")
+
+            stop_command = input("Enter stop to exit program: ")
+
+            if stop_command == "stop":
+                break
+            else:
+                first_num = int(input("Enter the First number: "))
+                operator = input("Enter the operator: ")
+                second_num = int(input("Enter the Second number: "))
+
+                if operator == "+":
+                    print()
+                    print(f"Sum of the numbers are: {first_num + second_num}")
+                elif operator == "-":
+                    print()
+                    print(f"Sum of the numbers are: {first_num - second_num}")
+                elif operator == "*":
+                    print()
+                    print(f"Sum of the numbers are: {first_num * second_num}")
+                elif operator == "/":
+                    print()
+                    print(f"Sum of the numbers are: {first_num / second_num}")
+                elif operator == "//":
+                    print()
+                    print(f"Sum of the numbers are: {first_num // second_num}")
+                elif operator == "%":
+                    print()
+                    print(f"Sum of the numbers are: {first_num % second_num}")
+                else:
+                    print()
+                    print("Invalid number")
+
+    else:
+        print()
+        print("plz type start to start the basic calculator program")
+        print()
+        my_calculator()
+
+
+my_calculator()
